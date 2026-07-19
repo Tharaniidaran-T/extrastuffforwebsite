@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TTM AI</title>
+  <title>about:blank</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -394,7 +394,7 @@
 
       <div class="settings-section">
         <div class="settings-label">🔑 API Keys</div>
-        <div class="settings-desc">TTM AI talks to the model providers <b>directly from your browser</b> using your own keys. Add either or both — the model menu automatically unlocks the models you have a key for. Keys are stored only in this browser (localStorage) and are never sent anywhere except the provider you chose.</div>
+        <div class="settings-desc">Urnperiodic AI talks to the model providers <b>directly from your browser</b> using your own keys. Add either or both — the model menu automatically unlocks the models you have a key for. Keys are stored only in this browser (localStorage) and are never sent anywhere except the provider you chose.</div>
 
         <div class="settings-card">
           <div class="key-block">
@@ -501,7 +501,7 @@
             </svg>
           </div>
           <div>
-            <div class="wordmark-main">TTM AI</div>
+            <div class="wordmark-main">Urnperiodic AI</div>
             <div class="wordmark-sub">Gemini · Groq</div>
           </div>
         </div>
@@ -613,7 +613,7 @@
 
   /* ---------- System prompt ---------- */
   const DEFAULT_PROMPT =
-`You are Gemini AI made by TTM, a warm, brilliant, and meticulous assistant built to help students and curious people learn, create, and solve problems. You were made by TM. Your goal is to be genuinely useful: accurate, clear, and a pleasure to read.
+`You are Gemini AI made by Urnperiodic, a warm, brilliant, and meticulous assistant built to help students and curious people learn, create, and solve problems. You were made by TM. Your goal is to be genuinely useful: accurate, clear, and a pleasure to read.
 
 ## CORE BEHAVIOUR
 - Be accurate first. If you are unsure or something cannot be known, say so plainly instead of inventing facts.
@@ -655,13 +655,13 @@ Above all: be clear, be correct, format everything nicely, and finish the job.`;
   let conversations = [];      // [{id, title, messages:[{role,text,images,model}], updatedAt}]
   let currentConvId = null;    // id of the conversation being viewed
 
-  const LS_GEMINI = "ttm_gemini_key";
-  const LS_GROQ   = "ttm_groq_key";
-  const LS_PROMPT = "ttm_system_prompt";
-  const LS_MODEL  = "ttm_active_model";
-  const LS_THEME  = "ttm_theme";
-  const LS_CONVS  = "ttm_conversations";
-  const LS_SIDEBAR= "ttm_sidebar_open";
+  const LS_GEMINI = "Urnperiodic_gemini_key";
+  const LS_GROQ   = "Urnperiodic_groq_key";
+  const LS_PROMPT = "Urnperiodic_system_prompt";
+  const LS_MODEL  = "Urnperiodic_active_model";
+  const LS_THEME  = "Urnperiodic_theme";
+  const LS_CONVS  = "Urnperiodic_conversations";
+  const LS_SIDEBAR= "Urnperiodic_sidebar_open";
 
   /* ---------- DOM ---------- */
   const messagesEl = document.getElementById('messages');
@@ -1113,7 +1113,7 @@ Above all: be clear, be correct, format everything nicely, and finish the job.`;
         </button>
       </div>`;
     }
-    row.innerHTML = `<div class="msg-label">${role==='user'?'you':'ttm ai'}</div><div class="msg-content">${imagesHtml}${bubbleHtml}${metaHtml}${actionsHtml}</div>`;
+    row.innerHTML = `<div class="msg-label">${role==='user'?'you':'Urnperiodic ai'}</div><div class="msg-content">${imagesHtml}${bubbleHtml}${metaHtml}${actionsHtml}</div>`;
     messagesInner.appendChild(row);
     if(!skipHistory) messagesEl.scrollTop = messagesEl.scrollHeight;
     return row;
@@ -1122,7 +1122,7 @@ Above all: be clear, be correct, format everything nicely, and finish the job.`;
     removeWelcome();
     const row = document.createElement('div');
     row.className='msg-row ai'; row.id='typing-row';
-    row.innerHTML = `<div class="msg-label">ttm ai</div><div class="msg-content"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
+    row.innerHTML = `<div class="msg-label">Urnperiodic ai</div><div class="msg-content"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
     messagesInner.appendChild(row); messagesEl.scrollTop = messagesEl.scrollHeight;
   }
   function removeTyping(){ document.getElementById('typing-row')?.remove(); }
